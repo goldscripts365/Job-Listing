@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cm</title>
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css"/>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/270ee4c189.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="container">
+        <div id="serverlogo"><img src="img/logo.png" style="position: absolute; height: 300px;width: 300px;top: 1%;left: 3%;"></div>
+        <div id="fisherman" style="position: absolute;font-size: 50px;top:300px;left:23px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>FISHERMAN</span></div>
+        <div id="fueler" style="position: absolute;font-size: 50px;top:400px;left:23px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>FUELER</span></div>
+        <div id="lumberjack" style="position: absolute;font-size: 48px;top:500px;left:23px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>LUMBERJACK</span></div>
+        <div id="miner" style="position: absolute;font-size: 50px;top:600px;left:23px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>MINER</span></div>
+        <div id="reporter" style="position: absolute;font-size: 50px;top:700px;left:23px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>REPORTER</span></div>
+        <div id="slaughterer" style="position: absolute;font-size: 50px;top:800px;left:23px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>BUTCHER</span></div>
+        <div id="tailor" style="position: absolute;font-size: 50px;top:900px;left:23px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>TAILOR</span></div>
+
+        <div id="fisherman-panel" style="display: none;">
+            <div id="logo"><img src="img/fisher.png" style="position: absolute;width: 50%;height: 50%;left: 50%;top: 20%;"></div>
+            <div id="rank" style="position: absolute;font-size: 35px;top:480px;left:200px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>GRADE : Employee</span></div>
+            <button class="buy-btn" style="position: absolute;font-size: 100px;top: 600px;left: 200px;border-radius: 3%;border-color: red;border-style: double; background-color:rgba(255, 255, 255, 0.281);" onclick="BuyBtn('fisherman-btn')"><span>Take Job</span></button>
+        </div>
+
+        <div id="fueler-panel" style="display: none;">
+            <div id="logo"><img src="img/fueler.png" style="position: absolute;width: 50%;height: 50%;left: 50%;top: 20%;"></div>
+            <div id="rank" style="position: absolute;font-size: 35px;top:480px;left:200px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>GRADE : Employee</span></div>
+            <button class="buy-btn" style="position: absolute;font-size: 100px;top: 600px;left: 200px;border-radius: 3%;border-color: red;border-style: double; background-color:rgba(255, 255, 255, 0.281);" onclick="BuyBtn('fueler-btn')"><span>Take Job</span></button>
+        </div>
+
+        <div id="lumberjack-panel" style="display: none;">
+            <div id="logo"><img src="img/lumberjack.png" style="position: absolute;width: 50%;height: 40%;left: 50%;top: 20%;"></div>
+            <div id="rank" style="position: absolute;font-size: 35px;top:480px;left:200px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>GRADE : Employee</span></div>
+            <button class="buy-btn" style="position: absolute;font-size: 100px;top: 600px;left: 200px;border-radius: 3%;border-color: red;border-style: double; background-color:rgba(255, 255, 255, 0.281);" onclick="BuyBtn('lumberjack-btn')"><span>Take Job</span></button>
+        </div>
+
+        <div id="miner-panel" style="display: none;">
+            <div id="logo"><img src="img/miner.png" style="position: absolute;width: 50%;height: 50%;left: 50%;top: 20%;"></div>
+            <div id="rank" style="position: absolute;font-size: 35px;top:480px;left:200px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>GRADE : Employee</span></div>
+            <button class="buy-btn" style="position: absolute;font-size: 100px;top: 600px;left: 200px;border-radius: 3%;border-color: red;border-style: double; background-color:rgba(255, 255, 255, 0.281);" onclick="BuyBtn('miner-btn')"><span>Take Job</span></button>
+        </div>
+
+        <div id="reporter-panel" style="display: none;">
+            <div id="logo"><img src="img/reporter.png" style="position: absolute;width: 50%;height: 50%;left: 50%;top: 5%;"></div>
+            <div id="rank" style="position: absolute;font-size: 35px;top:480px;left:200px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>GRADE : Employee</span></div>
+            <button class="buy-btn" style="position: absolute;font-size: 100px;top: 600px;left: 200px;border-radius: 3%;border-color: red;border-style: double; background-color:rgba(255, 255, 255, 0.281);" onclick="BuyBtn('reporter-btn')"><span>Take Job</span></button>
+        </div>
+
+        <div id="slaughterer-panel" style="display: none;">
+            <div id="logo"><img src="img/slaughterer.png" style="position: absolute;width: 50%;height: 50%;left: 50%;top: 5%;"></div>
+            <div id="rank" style="position: absolute;font-size: 35px;top:480px;left:200px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>GRADE : Employee</span></div>
+            <button class="buy-btn" style="position: absolute;font-size: 100px;top: 600px;left: 200px;border-radius: 3%;border-color: red;border-style: double; background-color:rgba(255, 255, 255, 0.281);" onclick="BuyBtn('slaughterer-btn')"><span>Take Job</span></button>
+        </div>
+
+        <div id="tailor-panel" style="display: none;">
+            <div id="logo"><img src="img/tailor.png" style="position: absolute;width: 50%;height: 50%;left: 50%;top: 5%;"></div>
+            <div id="rank" style="position: absolute;font-size: 35px;top:480px;left:200px;font-family: Georgia, 'Times New Roman', Times, serif;color: white;"><span>GRADE : Employee</span></div>
+            <button class="buy-btn" style="position: absolute;font-size: 100px;top: 600px;left: 200px;border-radius: 3%;border-color: red;border-style: double; background-color:rgba(255, 255, 255, 0.281);" onclick="BuyBtn('tailor-btn')"><span>Take Job</span></button>
+        </div>
+    </div>
+</body>
+</html>
